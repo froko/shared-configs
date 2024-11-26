@@ -1,18 +1,11 @@
 {
   "targetDefaults": {
-    "format": {
-      "cache": true
-    },
-    "lint": {
-      "cache": true
-    },
-    "build": {
-      "dependsOn": ["^build"],
-      "cache": true
-    },
-    "test": {
-      "dependsOn": ["build"],
-      "cache": true
-    }
+    "format": { "cache": true }
+  },
+  "release": {
+    "version": { "conventionalCommits": true }
+  },
+  "changelog": {
+    "workspaceChangelog": { "createRelease": "github" }
   }
 }

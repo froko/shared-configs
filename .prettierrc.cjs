@@ -1,7 +1,6 @@
 module.exports = {
   singleQuote: true,
-  semi: true,
-  bracketSameLine: true,
+  semi: false,
   overrides: [
     {
       files: '*.md',
@@ -10,4 +9,4 @@ module.exports = {
       },
     },
   ],
-};
+}
