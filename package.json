@@ -1,0 +1,28 @@
+{
+  "name": "nx-monorepo",
+  "version": "0.0.1",
+  "description": "Nx Monorepo starter project",
+  "author": "Patrick Ineichen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/froko/nx-monorepo.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier . --write && nx run-many -t format --parallel",
+    "affected": "nx affected -t lint,build,test",
+    "all": "nx run-many -t lint,build,test",
+    "lint": "nx run-many -t lint --parallel",
+    "build": "nx run-many -t build --parallel",
+    "test": "nx run-many -t test",
+    "release": "semantic-release"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "nx": "^20.0.0",
+    "prettier": "^3.3.3",
+    "semantic-release": "^24.1.0"
+  },
+  "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387"
+}
