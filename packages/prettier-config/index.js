@@ -1,6 +1,7 @@
-module.exports = {
-  singleQuote: true,
+const config = {
   semi: false,
+  singleQuote: true,
+  bracketSameLine: true,
   overrides: [
     {
       files: '*.md',
@@ -10,3 +11,5 @@ module.exports = {
     },
   ],
 }
+
+export default config

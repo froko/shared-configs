@@ -1,0 +1,19 @@
+{
+  "name": "@froko/prettier-config",
+  "version": "0.0.1",
+  "description": "Shareable prettier configuration",
+  "author": "Patrick Ineichen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/froko/shared-configs.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": "./index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "prettier": ">=3.0.0"
+  }
+}
