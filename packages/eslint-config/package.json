@@ -1,0 +1,27 @@
+{
+  "name": "@froko/eslint-config",
+  "version": "0.0.1",
+  "description": "Shareable ESLint configuration",
+  "author": "Patrick Ineichen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/froko/shared-configs.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@eslint/compat": "^1.2.3",
+    "@eslint/js": "^9.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^15.12.0",
+    "typescript-eslint": "^8.16.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.0.0"
+  }
+}
