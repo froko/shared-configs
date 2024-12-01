@@ -1,3 +1,19 @@
+# 1.0.0 (2024-12-01)
+
+### 🚀 Features
+
+- ⚠️  **eslint-config:** include README in package ([#12](https://github.com/froko/shared-configs/pull/12))
+- ⚠️  **prettier-config:** include README in package ([#11](https://github.com/froko/shared-configs/pull/11))
+
+### ⚠️  Breaking Changes
+
+- ⚠️  **eslint-config:** include README in package ([#12](https://github.com/froko/shared-configs/pull/12))
+- ⚠️  **prettier-config:** include README in package ([#11](https://github.com/froko/shared-configs/pull/11))
+
+### ❤️ Thank You
+
+- Patrick Ineichen @froko
+
 ## 0.1.0 (2024-12-01)
 
 ### 🚀 Features

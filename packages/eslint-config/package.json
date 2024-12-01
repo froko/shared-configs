@@ -1,6 +1,6 @@
 {
   "name": "@froko/eslint-config",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Shareable ESLint configuration",
   "author": "Patrick Ineichen",
   "repository": {
