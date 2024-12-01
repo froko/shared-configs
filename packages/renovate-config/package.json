@@ -1,0 +1,12 @@
+{
+  "name": "@froko/renovate-config",
+  "version": "0.0.1",
+  "description": "Shareable renovate configuration",
+  "author": "Patrick Ineichen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/froko/shared-configs.git"
+  },
+  "license": "MIT",
+  "private": true
+}
