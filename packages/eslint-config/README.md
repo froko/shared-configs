@@ -1,5 +1,8 @@
 # 📦 [`@froko/eslint-config`](https://www.npmjs.com/package/@froko/eslint-config)
 
+![](https://img.shields.io/npm/v/%40froko%2Feslint-config/latest.svg)
+[![](https://img.shields.io/npm/dw/@froko/eslint-config)](https://npmjs.com/package/@froko/eslint-config)
+
 ## 📥 Installation
 
 ```bash
