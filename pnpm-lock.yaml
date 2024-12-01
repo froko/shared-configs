@@ -48,6 +48,8 @@ importers:
         specifier: '>=3.0.0'
         version: 3.4.1
 
+  packages/renovate-config: {}
+
 packages:
 
   '@ampproject/remapping@2.3.0':
