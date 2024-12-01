@@ -1,5 +1,8 @@
 # 📦 [`@froko/prettier-config`](https://www.npmjs.com/package/@froko/prettier-config)
 
+![](https://img.shields.io/npm/v/%40froko%2Fprettier-config/latest.svg)
+[![](https://img.shields.io/npm/dw/@froko/prettier-config)](https://npmjs.com/package/@froko/prettier-config)
+
 ## 📥 Installation
 
 ```bash
