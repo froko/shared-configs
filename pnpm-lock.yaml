@@ -45,7 +45,7 @@ importers:
   packages/prettier-config:
     dependencies:
       prettier:
-        specifier: '>=3.0.0'
+        specifier: ^3.4.2
         version: 3.4.2
 
   packages/renovate-config: {}
