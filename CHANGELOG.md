@@ -1,3 +1,19 @@
+## 1.1.0 (2024-12-31)
+
+### 🚀 Features
+
+- **eslint-config:** internalize peer deps ([#18](https://github.com/froko/shared-configs/pull/18))
+- **prettier-config:** internalize peer deps ([#19](https://github.com/froko/shared-configs/pull/19))
+
+### 🩹 Fixes
+
+- **deps:** update all non-major dependencies ([#14](https://github.com/froko/shared-configs/pull/14))
+- **deps:** update all non-major dependencies ([#16](https://github.com/froko/shared-configs/pull/16))
+
+### ❤️ Thank You
+
+- Patrick Ineichen @froko
+
 # 1.0.0 (2024-12-01)
 
 ### 🚀 Features
