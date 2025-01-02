@@ -1,3 +1,13 @@
+## 1.2.0 (2025-01-02)
+
+### 🚀 Features
+
+- **eslint-config:** update dependencies ([#20](https://github.com/froko/shared-configs/pull/20))
+
+### ❤️ Thank You
+
+- Patrick Ineichen @froko
+
 ## 1.1.0 (2024-12-31)
 
 ### 🚀 Features
