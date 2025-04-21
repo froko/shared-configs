@@ -1,3 +1,23 @@
+## 1.3.0 (2025-04-21)
+
+### 🚀 Features
+
+- **eslint-config:** externalize peer deps ([#35](https://github.com/froko/shared-configs/pull/35))
+- **prettier-config:** externalize peer deps ([#34](https://github.com/froko/shared-configs/pull/34))
+
+### 🩹 Fixes
+
+- **deps:** update all non-major dependencies ([#24](https://github.com/froko/shared-configs/pull/24))
+- **deps:** update all non-major dependencies ([#27](https://github.com/froko/shared-configs/pull/27))
+- **deps:** update all non-major dependencies ([#29](https://github.com/froko/shared-configs/pull/29))
+- **deps:** update all non-major dependencies ([#32](https://github.com/froko/shared-configs/pull/32))
+- **deps:** update dependency globals to v16 ([#33](https://github.com/froko/shared-configs/pull/33))
+- **deps:** update dependency eslint-config-prettier to v10 ([#26](https://github.com/froko/shared-configs/pull/26))
+
+### ❤️ Thank You
+
+- Patrick Ineichen @froko
+
 ## 1.2.0 (2025-01-02)
 
 ### 🚀 Features
