@@ -12,8 +12,8 @@
     "format": "prettier . --write"
   },
   "devDependencies": {
-    "@nx/js": "^20.1.4",
-    "nx": "^20.1.4",
+    "@nx/js": "^21.0.0",
+    "nx": "^21.0.0",
     "prettier": "^3.4.1"
   },
   "prettier": "./packages/prettier-config/index.js",
