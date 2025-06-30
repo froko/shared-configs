@@ -16,7 +16,7 @@ importers:
         version: 20.8.2
       prettier:
         specifier: ^3.4.1
-        version: 3.6.0
+        version: 3.6.2
 
   packages/eslint-config:
     dependencies:
@@ -1623,6 +1623,11 @@ packages:
 
   prettier@3.6.0:
     resolution: {integrity: sha512-ujSB9uXHJKzM/2GBuE0hBOUgC77CN3Bnpqa+g80bkv3T3A93wL/xlzDATHhnhkzifz/UE2SNOvmbTz5hSkDlHw==}
+    engines: {node: '>=14'}
+    hasBin: true
+
+  prettier@3.6.2:
+    resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -3675,6 +3680,8 @@ snapshots:
   prelude-ls@1.2.1: {}
 
   prettier@3.6.0: {}
+
+  prettier@3.6.2: {}
 
   pretty-format@29.7.0:
     dependencies:
