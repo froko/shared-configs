@@ -20,11 +20,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "automerge": true,
-    "schedule": ["before 7am on Monday"]
-  },
   "packageRules": [
     {
       "description": "Automerge non-major updates",
@@ -33,7 +28,7 @@
       "matchPackageNames": ["*"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
-      "schedule": ["before 6am on Monday"]
+      "schedule": ["* * 1 */3 *"]
     }
   ]
 }

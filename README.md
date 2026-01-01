@@ -2,11 +2,11 @@
 
 A MonoRepo with shared configurations for prettier, ESLint and renovate.
 
-| **Package** | **Version** | **Downloads** |
-| ------------| ----------- | ------------- |
-| 📦 [`@froko/prettier-config`](https://npmjs.com/package/@froko/prettier-config) | ![](https://img.shields.io/npm/v/%40froko%2Fprettier-config/latest.svg)                                                                       | [![](https://img.shields.io/npm/dw/@froko/prettier-config)](https://npmjs.com/package/@froko/prettier-config) |
-| 📦 [`@froko/eslint-config`](https://npmjs.com/package/@froko/eslint-config)     | ![](https://img.shields.io/npm/v/%40froko%2Feslint-config/latest.svg)                                                                         | [![](https://img.shields.io/npm/dw/@froko/eslint-config)](https://npmjs.com/package/@froko/eslint-config)     |
-| 📝 [`@froko/renovate-config`](https://github.com/froko/shared-configs/blob/main/README.md#-frokorenovate-config) | - | - |
+| **Package**                                                                                                      | **Version**                                                             | **Downloads**                                                                                                 |
+| ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| 📦 [`@froko/prettier-config`](https://npmjs.com/package/@froko/prettier-config)                                  | ![](https://img.shields.io/npm/v/%40froko%2Fprettier-config/latest.svg) | [![](https://img.shields.io/npm/dw/@froko/prettier-config)](https://npmjs.com/package/@froko/prettier-config) |
+| 📦 [`@froko/eslint-config`](https://npmjs.com/package/@froko/eslint-config)                                      | ![](https://img.shields.io/npm/v/%40froko%2Feslint-config/latest.svg)   | [![](https://img.shields.io/npm/dw/@froko/eslint-config)](https://npmjs.com/package/@froko/eslint-config)     |
+| 📝 [`@froko/renovate-config`](https://github.com/froko/shared-configs/blob/main/README.md#-frokorenovate-config) | -                                                                       | -                                                                                                             |
 
 ---
 
@@ -172,11 +172,6 @@ export const defaultConfigWithPrettier = [...defaultConfig, withPrettier]
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "automerge": true,
-    "schedule": ["before 7am on Monday"]
-  },
   "packageRules": [
     {
       "description": "Automerge non-major updates",
@@ -185,7 +180,7 @@ export const defaultConfigWithPrettier = [...defaultConfig, withPrettier]
       "matchPackageNames": ["*"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
-      "schedule": ["before 6am on Monday"]
+      "schedule": ["* * 1 */3 *"]
     }
   ]
 }
