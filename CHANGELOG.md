@@ -1,3 +1,19 @@
+## 1.4.0 (2026-01-03)
+
+### 🚀 Features
+
+- **eslint-config:** update dependencies ([#114](https://github.com/froko/shared-configs/pull/114))
+- **prettier-config:** update prettier peer dependency to 3.7.4 ([#115](https://github.com/froko/shared-configs/pull/115))
+- **renovate-config:** update schedule to the 1st day, every 3 months ([#116](https://github.com/froko/shared-configs/pull/116))
+
+### 🩹 Fixes
+
+- **deps:** update dependency globals to v17 ([#117](https://github.com/froko/shared-configs/pull/117))
+
+### ❤️ Thank You
+
+- Patrick Ineichen @froko
+
 ## 1.3.0 (2025-04-21)
 
 ### 🚀 Features
