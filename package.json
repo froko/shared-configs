@@ -12,9 +12,9 @@
     "format": "prettier . --write"
   },
   "devDependencies": {
-    "@nx/js": "^22.3.3",
-    "nx": "^22.3.3",
-    "prettier": "^3.7.4"
+    "@nx/js": "^22.5.1",
+    "nx": "^22.5.1",
+    "prettier": "^3.8.1"
   },
   "prettier": "./packages/prettier-config/index.js",
   "packageManager": "pnpm@10.27.0"
