@@ -9,12 +9,12 @@ import tseslint from 'typescript-eslint'
 
 const gitingore = path.resolve(process.cwd(), '.gitignore')
 
-export const defaultConfig = tseslint.config(
+export const defaultConfig = [
   includeIgnoreFile(gitingore),
-  js.configs.recommended,
-  ...tseslint.configs.strict,
-  ...tseslint.configs.stylistic,
   {
+    files: ['**/*.{js,mjs,cjs,ts,mts,cts}'],
+    plugins: { js },
+    extends: ['js/recommended'],
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -22,6 +22,8 @@ export const defaultConfig = tseslint.config(
       },
     },
   },
+  tseslint.configs.strict,
+  tseslint.configs.stylistic,
   {
     plugins: { 'simple-import-sort': simpleImportSort },
     rules: {
@@ -29,7 +31,7 @@ export const defaultConfig = tseslint.config(
       'simple-import-sort/exports': 'warn',
     },
   },
-)
+]
 
 export const withPrettier = eslintConfigPrettier
 
