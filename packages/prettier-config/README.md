@@ -6,9 +6,9 @@
 ## 📥 Installation
 
 ```bash
-npm install --save-dev @froko/prettier-config
-yarn add --dev @froko/prettier-config
-pnpm install --save-dev @froko/prettier-config
+npm install --save-dev @froko/prettier-config prettier
+yarn add --dev @froko/prettier-config prettier
+pnpm install --save-dev @froko/prettier-config prettier
 ```
 
 ## 🔩 Usage
