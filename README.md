@@ -15,9 +15,9 @@ A MonoRepo with shared configurations for prettier, ESLint and renovate.
 ### 📥 Installation
 
 ```bash
-npm install --save-dev @froko/prettier-config
-yarn add --dev @froko/prettier-config
-pnpm install --save-dev @froko/prettier-config
+npm install --save-dev @froko/prettier-config prettier
+yarn add --dev @froko/prettier-config prettier
+pnpm install --save-dev @froko/prettier-config prettier
 ```
 
 ### 🔩 Usage
@@ -70,9 +70,9 @@ find an example configuration.
 ### 📥 Installation
 
 ```bash
-npm install --save-dev @froko/eslint-config
-yarn add --dev @froko/eslint-config
-pnpm install --save-dev @froko/eslint-config
+npm install --save-dev @froko/eslint-config eslint
+yarn add --dev @froko/eslint-config eslint
+pnpm install --save-dev @froko/eslint-config eslint
 ```
 
 ### 🔩 Usage
@@ -86,8 +86,9 @@ directories defined in `.gitignore` are ignored automatically.
 ```js
 // eslint.config.js
 import { defaultConfigWithPrettier } from '@froko/eslint-config'
+import { defineConfig } from 'eslint/config'
 
-export default [...defaultConfigWithPrettier]
+export default defineConfig(defaultConfigWithPrettier)
 ```
 
 #### Configuration with additional plugins
@@ -99,12 +100,13 @@ the prettier plugin has to be included as last element.
 ```js
 // eslint.config.js
 import { defaultConfig, withPrettier } from '@froko/eslint-config'
+import { defineConfig } from 'eslint/config'
 
-export default [
-  ...defaultConfig,
+export default defineConfig(
+  defaultConfig,
   // your plugins,
   withPrettier,
-]
+)
 ```
 
 ### 📝 Content
@@ -121,12 +123,12 @@ import tseslint from 'typescript-eslint'
 
 const gitingore = path.resolve(process.cwd(), '.gitignore')
 
-export const defaultConfig = tseslint.config(
+export const defaultConfig = [
   includeIgnoreFile(gitingore),
-  js.configs.recommended,
-  ...tseslint.configs.strict,
-  ...tseslint.configs.stylistic,
   {
+    files: ['**/*.{js,mjs,cjs,ts,mts,cts}'],
+    plugins: { js },
+    extends: ['js/recommended'],
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -134,6 +136,8 @@ export const defaultConfig = tseslint.config(
       },
     },
   },
+  tseslint.configs.strict,
+  tseslint.configs.stylistic,
   {
     plugins: { 'simple-import-sort': simpleImportSort },
     rules: {
@@ -141,7 +145,7 @@ export const defaultConfig = tseslint.config(
       'simple-import-sort/exports': 'warn',
     },
   },
-)
+]
 
 export const withPrettier = eslintConfigPrettier
 
