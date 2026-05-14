@@ -16,13 +16,12 @@
     "access": "public"
   },
   "dependencies": {
-    "@eslint/compat": "^2.0.2",
+    "@eslint/compat": "^2.1.0",
     "@eslint/js": "^10.0.1",
-    "eslint": "^10.0.0",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-simple-import-sort": "^12.1.1",
-    "globals": "^17.3.0",
-    "typescript-eslint": "^8.56.0"
+    "eslint-plugin-simple-import-sort": "^13.0.0",
+    "globals": "^17.6.0",
+    "typescript-eslint": "^8.59.3"
   },
   "peerDependencies": {
     "eslint": ">=10.0.0 <11.0.0"
