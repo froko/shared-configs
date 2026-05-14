@@ -1,3 +1,14 @@
+## 2.2.0 (2026-05-14)
+
+### 🚀 Features
+
+- **eslint-config:** update dependencies ([617d7a2](https://github.com/froko/shared-configs/commit/617d7a2))
+- **prettier-config:** update prettier peer dependency to 3.8.3 ([eba2bc1](https://github.com/froko/shared-configs/commit/eba2bc1))
+
+### ❤️ Thank You
+
+- Patrick Ineichen @froko
+
 ## 2.1.0 (2026-02-20)
 
 This was a version bump only, there were no code changes.
