@@ -1,11 +1,18 @@
 {
   "targetDefaults": {
-    "format": { "cache": true }
+    "format": {
+      "cache": true
+    }
   },
   "release": {
-    "version": { "conventionalCommits": true }
+    "version": {
+      "conventionalCommits": true
+    }
   },
   "changelog": {
-    "workspaceChangelog": { "createRelease": "github" }
-  }
+    "workspaceChangelog": {
+      "createRelease": "github"
+    }
+  },
+  "analytics": true
 }
