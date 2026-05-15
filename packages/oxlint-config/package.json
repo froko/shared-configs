@@ -1,0 +1,24 @@
+{
+  "name": "@froko/oxlint-config",
+  "version": "1.0.0",
+  "description": "Shareable oxlint configuration",
+  "author": "Patrick Ineichen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/froko/shared-configs.git"
+  },
+  "bugs": "https://github.com/froko/shared-configs/issues",
+  "homepage": "https://github.com/froko/shared-configs/tree/main/#readme",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./json": "./.oxlintrc.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "oxlint": ">=1.0.0"
+  }
+}

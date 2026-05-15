@@ -1,0 +1,23 @@
+const config = {
+  plugins: ['typescript', 'import'],
+  env: {
+    browser: true,
+    node: true,
+  },
+  categories: {
+    correctness: 'error',
+    suspicious: 'warn',
+  },
+  rules: {
+    '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+    '@typescript-eslint/no-non-null-assertion': 'warn',
+    'import/no-cycle': 'error',
+    'import/no-self-import': 'error',
+    'import/no-duplicates': 'warn',
+  },
+  ignorePatterns: ['node_modules', 'dist', 'build', 'coverage'],
+}
+
+export default config

@@ -1,11 +1,14 @@
 # shared-configs
 
-A MonoRepo with shared configurations for prettier, ESLint and renovate.
+A MonoRepo with shared configurations for prettier, ESLint, oxfmt, oxlint and
+renovate.
 
 | **Package**                                                                                                      | **Version**                                                             | **Downloads**                                                                                                 |
 | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | 📦 [`@froko/prettier-config`](https://npmjs.com/package/@froko/prettier-config)                                  | ![](https://img.shields.io/npm/v/%40froko%2Fprettier-config/latest.svg) | [![](https://img.shields.io/npm/dw/@froko/prettier-config)](https://npmjs.com/package/@froko/prettier-config) |
 | 📦 [`@froko/eslint-config`](https://npmjs.com/package/@froko/eslint-config)                                      | ![](https://img.shields.io/npm/v/%40froko%2Feslint-config/latest.svg)   | [![](https://img.shields.io/npm/dw/@froko/eslint-config)](https://npmjs.com/package/@froko/eslint-config)     |
+| 📦 [`@froko/oxfmt-config`](https://npmjs.com/package/@froko/oxfmt-config)                                        | ![](https://img.shields.io/npm/v/%40froko%2Foxfmt-config/latest.svg)    | [![](https://img.shields.io/npm/dw/@froko/oxfmt-config)](https://npmjs.com/package/@froko/oxfmt-config)       |
+| 📦 [`@froko/oxlint-config`](https://npmjs.com/package/@froko/oxlint-config)                                      | ![](https://img.shields.io/npm/v/%40froko%2Foxlint-config/latest.svg)   | [![](https://img.shields.io/npm/dw/@froko/oxlint-config)](https://npmjs.com/package/@froko/oxlint-config)     |
 | 📝 [`@froko/renovate-config`](https://github.com/froko/shared-configs/blob/main/README.md#-frokorenovate-config) | -                                                                       | -                                                                                                             |
 
 ---
@@ -150,6 +153,147 @@ export const defaultConfig = [
 export const withPrettier = eslintConfigPrettier
 
 export const defaultConfigWithPrettier = [...defaultConfig, withPrettier]
+```
+
+---
+
+## 📦 [`@froko/oxfmt-config`](https://www.npmjs.com/package/@froko/oxfmt-config)
+
+### 📥 Installation
+
+```bash
+npm install --save-dev @froko/oxfmt-config oxfmt
+yarn add --dev @froko/oxfmt-config oxfmt
+pnpm install --save-dev @froko/oxfmt-config oxfmt
+```
+
+### 🔩 Usage
+
+```ts
+// oxfmt.config.ts
+import config from '@froko/oxfmt-config'
+
+export default config
+```
+
+Or with custom overrides:
+
+```ts
+// oxfmt.config.ts
+import config from '@froko/oxfmt-config'
+import { defineConfig } from 'oxfmt'
+
+export default defineConfig({
+  ...config,
+  // your overrides
+})
+```
+
+### 📝 Content
+
+```json
+{
+  "semi": false,
+  "singleQuote": true,
+  "bracketSameLine": true,
+  "printWidth": 80,
+  "sortImports": {},
+  "overrides": [
+    {
+      "files": ["*.md"],
+      "options": {
+        "proseWrap": "always"
+      }
+    }
+  ]
+}
+```
+
+There are no settings for indentation and line length. Oxfmt inherits those
+settings from `.editorconfig`.
+[Here](https://gist.github.com/froko/5a8fa7332908c459ff562127e2ea60d5) you can
+find an example configuration.
+
+---
+
+## 📦 [`@froko/oxlint-config`](https://www.npmjs.com/package/@froko/oxlint-config)
+
+### 📥 Installation
+
+```bash
+npm install --save-dev @froko/oxlint-config oxlint
+yarn add --dev @froko/oxlint-config oxlint
+pnpm install --save-dev @froko/oxlint-config oxlint
+```
+
+### 🔩 Usage
+
+#### Basic configuration
+
+The default configuration includes the `typescript` and `import` plugins,
+enables `correctness` and `suspicious` rule categories, and provides sensible
+TypeScript and import rules. Browser and Node.js globals are enabled.
+
+```ts
+// oxlint.config.ts
+import config from '@froko/oxlint-config'
+import { defineConfig } from 'oxlint'
+
+export default defineConfig({
+  extends: [config],
+})
+```
+
+#### Configuration with additional rules
+
+You can extend the shared config with project-specific rules:
+
+```ts
+// oxlint.config.ts
+import config from '@froko/oxlint-config'
+import { defineConfig } from 'oxlint'
+
+export default defineConfig({
+  extends: [config],
+  rules: {
+    'no-console': 'warn',
+  },
+})
+```
+
+#### JSON configuration
+
+```json
+// .oxlintrc.json
+{
+  "extends": ["./node_modules/@froko/oxlint-config/.oxlintrc.json"]
+}
+```
+
+### 📝 Content
+
+```json
+{
+  "plugins": ["typescript", "import"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn"
+  },
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+    "@typescript-eslint/no-non-null-assertion": "warn",
+    "import/no-cycle": "error",
+    "import/no-self-import": "error",
+    "import/no-duplicates": "warn"
+  },
+  "ignorePatterns": ["node_modules", "dist", "build", "coverage"]
+}
 ```
 
 ---

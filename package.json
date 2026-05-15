@@ -1,7 +1,7 @@
 {
   "name": "@froko/shared-configs",
   "version": "0.0.0",
-  "description": "Shared configurations for prettier, eslint and renovate",
+  "description": "Shared configurations for prettier, eslint, oxfmt, oxlint and renovate",
   "author": "Patrick Ineichen",
   "repository": {
     "type": "git",

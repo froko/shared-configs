@@ -1,0 +1,24 @@
+{
+  "name": "@froko/oxfmt-config",
+  "version": "1.0.0",
+  "description": "Shareable oxfmt configuration",
+  "author": "Patrick Ineichen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/froko/shared-configs.git"
+  },
+  "bugs": "https://github.com/froko/shared-configs/issues",
+  "homepage": "https://github.com/froko/shared-configs/tree/main/#readme",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./json": "./.oxfmtrc.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "oxfmt": ">=0.43.0"
+  }
+}
