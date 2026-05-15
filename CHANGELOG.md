@@ -2,7 +2,7 @@
 
 ### 🚀 Features
 
-- add configurations for osfmt & oxlint ([a074e8b](https://github.com/froko/shared-configs/commit/a074e8b))
+- add configurations for oxfmt & oxlint ([a074e8b](https://github.com/froko/shared-configs/commit/a074e8b))
 
 ### ❤️ Thank You
 
