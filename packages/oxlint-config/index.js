@@ -16,6 +16,7 @@ const config = {
     'import/no-cycle': 'error',
     'import/no-self-import': 'error',
     'import/no-duplicates': 'warn',
+    'no-unassigned-import': 'off',
   },
   ignorePatterns: ['node_modules', 'dist', 'build', 'coverage'],
 }
