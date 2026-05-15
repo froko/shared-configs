@@ -1,3 +1,13 @@
+# 3.0.0 (2026-05-15)
+
+### 🚀 Features
+
+- add configurations for osfmt & oxlint ([a074e8b](https://github.com/froko/shared-configs/commit/a074e8b))
+
+### ❤️ Thank You
+
+- Patrick Ineichen @froko
+
 ## 2.2.0 (2026-05-14)
 
 ### 🚀 Features
