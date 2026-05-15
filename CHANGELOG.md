@@ -1,3 +1,13 @@
+## 3.1.0 (2026-05-15)
+
+### 🚀 Features
+
+- **oxlint:** ignore no-unassigned-import rule ([bb63c9c](https://github.com/froko/shared-configs/commit/bb63c9c))
+
+### ❤️ Thank You
+
+- Patrick Ineichen @froko
+
 # 3.0.0 (2026-05-15)
 
 ### 🚀 Features
