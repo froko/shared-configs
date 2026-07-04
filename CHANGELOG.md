@@ -1,3 +1,13 @@
+## 3.2.1 (2026-07-04)
+
+### 🩹 Fixes
+
+- **eslint:** remove 'js/recommended' extension ([23188e3](https://github.com/froko/shared-configs/commit/23188e3))
+
+### ❤️ Thank You
+
+- Patrick Ineichen @froko
+
 ## 3.2.0 (2026-07-04)
 
 ### 🚀 Features

@@ -1,6 +1,6 @@
 {
   "name": "@froko/prettier-config",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "Shareable prettier configuration",
   "author": "Patrick Ineichen",
   "repository": {
