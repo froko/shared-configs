@@ -1,3 +1,13 @@
+## 3.2.0 (2026-07-04)
+
+### 🚀 Features
+
+- **eslint:** update shared config ([854c235](https://github.com/froko/shared-configs/commit/854c235))
+
+### ❤️ Thank You
+
+- Patrick Ineichen @froko
+
 ## 3.1.0 (2026-05-15)
 
 ### 🚀 Features
