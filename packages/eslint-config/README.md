@@ -64,7 +64,6 @@ export const defaultConfig = [
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts}'],
     plugins: { js },
-    extends: ['js/recommended'],
     languageOptions: {
       globals: {
         ...globals.browser,
