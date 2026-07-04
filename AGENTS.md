@@ -2,11 +2,13 @@
 
 ## Repository
 
-pnpm monorepo (pnpm 10, Node 24) managed by Nx. Three packages under
-`packages/`, all published to npm under the `@froko` scope:
+pnpm monorepo (pnpm 10, Node 24) managed by Nx. Five packages under `packages/`,
+published to npm under the `@froko` scope (except where noted):
 
 - **`prettier-config`** - shareable Prettier config (ESM, `index.js`)
 - **`eslint-config`** - shareable ESLint flat-config (ESM, `index.js`)
+- **`oxfmt-config`** - shareable oxfmt config (ESM, `index.js`)
+- **`oxlint-config`** - shareable oxlint config (ESM, `index.js`)
 - **`renovate-config`** - shareable Renovate preset (`index.json`, **private** -
   not published to npm, consumed via GitHub reference)
 
@@ -32,9 +34,9 @@ generated automatically.
 ## PR conventions
 
 PR titles must follow **Conventional Commits** - enforced by CI
-(`amannn/action-semantic-pull-request`). Scope should match the package name
-(`eslint-config`, `prettier-config`, `renovate-config`) when changes are
-package-specific.
+(`.github/workflows/lint-pr.yaml`, `amannn/action-semantic-pull-request`). Scope
+should match the package name (e.g. `eslint-config`, `oxlint-config`) when
+changes are package-specific.
 
 ## Style
 
@@ -51,6 +53,10 @@ package-specific.
   `typescript-eslint`, `eslint-config-prettier`, etc.) as `dependencies` so
   consumers don't install them manually. `eslint` itself is a `peerDependency`
   only - never add it to `dependencies` (causes duplicate instances).
+- `oxfmt-config` / `oxlint-config` are peer-dep only (`oxfmt` / `oxlint`); they
+  bundle nothing. Each has dual exports: `.` → `index.js` (JS object) and
+  `./json` → the raw `.oxfmtrc.json` / `.oxlintrc.json`. Keep both in sync when
+  changing rules.
 - `renovate-config` is `"private": true` - consumers reference it via
   `github>froko/shared-configs//packages/renovate-config/index.json`, not via
   npm.
